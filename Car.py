@@ -60,7 +60,7 @@ class Car:
 
 
 car1 = Car(97, 'BMW', 'S-Series')
-
+car1.current_speed()
 car1.accelerate(70)
 car1.brake(20)
 car1.brake(60)
