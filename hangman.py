@@ -5,7 +5,7 @@ import random
 class hangman:
     word = random.choice(hangman_words.word_list)
     lives = 10
-    guessed_letters = (" ")
+    guessed_letters = [ ]
     length = len(word)
     string = "_" * length
 
@@ -16,18 +16,32 @@ class hangman:
         return [char for char in string]
 
     print("The word is " + str(length) + " characters long")
-    print(string)
+    print(*string)
     string = splitter(string)
 
     while lives != 0:
         print(word)
         guess = input( "Please guess a letter...  ")
-        if guess.isalpha() and guess not in guessed_letters:
-            if str(guess) in word:
-                print("Yes, you guessed right ")
-                index = word.index(guess)
-                string[index] = guess
-                print(string)
+        guess = guess.upper()
+        if guess.isalpha():
+            if guess not in guessed_letters:
+                if str(guess) in word:
+                    print("Yes, you guessed right ")
+                    index = word.index(guess)
+                    string[index] = guess
+                    print(*string)
+                    guessed_letters.append(guess)
+                else:
+                    lives -= 1
+                    print("Uh-oh, no luck! You now have " + str(lives) + " lives left!")
+                    guessed_letters.append(guess)
+                    print("So far you have tried " + str(guessed_letters))
+            elif guess in guessed_letters:
+                print("Looks like you've already tried that letter")
+        else:
+            print("Please enter an alphabetical character")
+    else:
+        print("Oh No! You're out of lives!")
 
 
 
