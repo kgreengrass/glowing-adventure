@@ -101,7 +101,7 @@ class Plane(Vehicle):
 
     def lift(self, amount):
         self._altitude += amount
-        print("Woah, you're at  " + str(self._altitude) + " thousand feet")
+        print("Woah, you're at " + str(self._altitude) + " thousand feet")
 
     def drop(self, amount):
         if self._altitude - amount > 0:
