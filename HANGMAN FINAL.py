@@ -24,7 +24,7 @@ class Hangman:
     amended_word = split(amended_word)
     string = split(string)
     print("Welcome to hang man! Your word is " + str(length) + " characters long")
-    print(*word)
+    # print(*word)
     print(*string)
 
 
@@ -40,17 +40,23 @@ class Hangman:
                             index = amended_word.index(guess)
                             string[index] = guess
                             amended_word[index] = "_"
+                            if guess not in guess:
+                                guessed_letters.append(guess)
+
                     else:
                         index = word.index(guess)
                         string[index] = guess
                         amended_word[index] = "_"
+                        if guess not in guess:
+                            guessed_letters.append(guess)
                     print(*string)
                     # print(*amended_word)
                 else:
                     lives -= 1
                     print("No luck! You have " + str(lives) + " lives left!")
                     guessed_letters.append(guess)
-                    print("So far you have tried " + str(guessed_letters))
+                    print("So far you have tried: ")
+                    print(*guessed_letters)
             else:
                 print("Looks like you've already tried that letter")
         else:
@@ -58,6 +64,8 @@ class Hangman:
     else:
         if lives == 0:
             print("Oops! You're dead.")
+            print("Your word was....")
+            print(*word)
             exit()
         else:
             print("Congratulations! You won")
