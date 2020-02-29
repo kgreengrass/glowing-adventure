@@ -1,32 +1,32 @@
-# comments are written like this
-print('hello world!')
-msg = "Hello World, This is testing"  # str
-# name = "Kate"
-print(msg)
-a = 1
-b = 2  # int
-c = 3.5  # float
-
-# print is a method, a method usually does something to a variable
-
-type(msg)  # lets us find out the type of our objects
-print(type(msg))  # have to ask it to tell us the value
-print(type(c))
-print(type(b))
-
-# name = input('What is your name?  ')
-# print(msg + ' ' + name + '!')
-# age = input('How old are you?  ')
-# age = int(age)
-# grg = 'I see that you are '
-# dob = input('What is your date of birth?  ')
-# snacc = input('What is your favourite snack?  ')
-# g1 = ' and that your date of birth is '
-# g2 = ' is my favourite too!'
-# print(grg + str(age) + g1 + str(dob) + '. ' + snacc + g2) this is called 'casting'
-
-e = complex(2, 4)
-print(e)
+# # comments are written like this
+# print('hello world!')
+# msg = "Hello World, This is testing"  # str
+# # name = "Kate"
+# print(msg)
+# a = 1
+# b = 2  # int
+# c = 3.5  # float
+#
+# # print is a method, a method usually does something to a variable
+#
+# type(msg)  # lets us find out the type of our objects
+# print(type(msg))  # have to ask it to tell us the value
+# print(type(c))
+# print(type(b))
+#
+# # name = input('What is your name?  ')
+# # print(msg + ' ' + name + '!')
+# # age = input('How old are you?  ')
+# # age = int(age)
+# # grg = 'I see that you are '
+# # dob = input('What is your date of birth?  ')
+# # snacc = input('What is your favourite snack?  ')
+# # g1 = ' and that your date of birth is '
+# # g2 = ' is my favourite too!'
+# # print(grg + str(age) + g1 + str(dob) + '. ' + snacc + g2) this is called 'casting'
+#
+# e = complex(2, 4)
+# print(e)
 
 # how to add an int and a float  click control and forward slash to hash everything
 # f= b + c
@@ -80,24 +80,26 @@ print(e)
 # print(msg.isalpha())  # detects if there are only alphabetical character
 # print(msg.islower()) # checks if a string is lower case
 # print(msg.endswith('e'))
-# print(msg.startswith('H'))
+# # print(msg.startswith('H'))
+# #
 #
+# x = 0
+# y = 10
+# z = -1
+# d = None
 
-x = 0
-y = 10
-z = -1
-d = None
-
-print(bool(x))  # is a nothing, therefore it is false
-print(bool(y))  # is true
-print(bool(d))
+# print(bool(x))  # is a nothing, therefore it is false
+# print(bool(y))  # is true
+# print(bool(d))
 
 # LISTS AND TUPLES #
 # LISTS HAVE SQUARE BRACKETS AND TUPLES HAVE ROUND BRACKETS#
 # tuples cannot be altered
 #
-# shopping_list=["nutella", "oranges", "tofu", "bourbons", 47, "One", "6"]  # lists can contain any data type
-# print(shopping_list)  # whole list
+shopping_list=["nutella", "oranges", "tofu", "bourbons", 47, "One", "6"]  # lists can contain any data type
+print(shopping_list)  # whole list
+if "nutella" in shopping_list:
+    print("yes")
 # print(shopping_list[0])  # certain item in the list
 # print(type(shopping_list))
 # shopping_list.append("carrots")  # add something new
@@ -174,16 +176,16 @@ print(bool(d))
 #
 
 ######## SETS AND FROZEN SETS ############
-# are unordered and unindexed
-animals = {"giraffe", "dog", "guinea pig", "elephant", "tortoise"}
-print(animals)  # random order
-
-animals.add("lion")
-print(animals)
-animals.add("goat")
-print(animals)
-animals.discard("lion")
-print(animals)
+# # are unordered and unindexed
+# animals = {"giraffe", "dog", "guinea pig", "elephant", "tortoise"}
+# print(animals)  # random order
+#
+# animals.add("lion")
+# print(animals)
+# animals.add("goat")
+# print(animals)
+# animals.discard("lion")
+# print(animals)
 #
 # # a frozen set you cannot change
 # animals2 = frozenset(["giraffe", "dog", "guinea pig", "elephant", "tortoise"])
@@ -199,24 +201,24 @@ print(animals)
 # else:
 #     print("Click here to buy")
 
-# TASK: provide user input of age
-##############HOMEWORK
-print("Hi there movie goer, the movies available today fit into the following categories: U, PG, 12A, 15 and 18")
-rating = input("Which would you like to hear about?  ")
-if rating == "18":
-    print("Only people aged 18 and over can watch these movies, you may be asked to provide ID")
-elif rating == "15":
-    print("These movies are suitable for viewers age 15 and over")
-elif rating == "12":
-    print("These films are watchable by viewers over the age of 12, any viewers below this age must have a parent present")
-elif rating == "PG":
-    print("These films may not be appropriate for very small children, parental guidance is advised")
-elif rating == "U":
-    print("These films are suitable for everyone, have fun!")
-else:
-    print("Sorry, we didn't recognise your input, please try again.")
-
-
+# # TASK: provide user input of age
+# ##############HOMEWORK
+# print("Hi there movie goer, the movies available today fit into the following categories: U, PG, 12A, 15 and 18")
+# rating = input("Which would you like to hear about?  ")
+# if rating == "18":
+#     print("Only people aged 18 and over can watch these movies, you may be asked to provide ID")
+# elif rating == "15":
+#     print("These movies are suitable for viewers age 15 and over")
+# elif rating == "12":
+#     print("These films are watchable by viewers over the age of 12, any viewers below this age must have a parent present")
+# elif rating == "PG":
+#     print("These films may not be appropriate for very small children, parental guidance is advised")
+# elif rating == "U":
+#     print("These films are suitable for everyone, have fun!")
+# else:
+#     print("Sorry, we didn't recognise your input, please try again.")
+#
+#
 
 
 

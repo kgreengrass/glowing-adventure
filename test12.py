@@ -36,6 +36,8 @@ class  hangman:
                 word = split(word)
                 amended_word = word.pop(index)
             print(*string)
+            print(*amended_word)
+            print(''.join(word))
 
 
         else:
